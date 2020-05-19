@@ -1,0 +1,20 @@
+<app-layout></app-layout>
+<div class="container home-content">
+    <div class="row">
+        <div class="col-md-1"><a routerLink='/home'>Back</a></div>
+        <div class="col-md-11">
+            <h2>Account Information</h2>
+            <form ngNativeValidate [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+                <div class="form-group row">
+                    <label class="col-sm-2" for="name">Account Number:</label>
+                    <div class="col-sm-5">
+                        <input required type="text" class="form-control" id="accNum" placeholder="Enter Account Number"
+                            name="acctNum" formControlName="acctNum">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
